@@ -17,6 +17,23 @@
     <button class="click">クリック</button>
     <script>
     //  ここにjQueryを記入
+    function open(){
+        $(".left").animate({width:'0%'});
+        $(".right").animate({width:'0%'},);
+    }
+    function close(){
+        $(".left.action").animate({width:'50%'});
+        $(".right.action").animate({width:'50%'});
+    }
+
+    $('button').on('click', function(){
+        $(this).toggleClass("active");
+    if($('div').hasClass('left','right')){
+            open();
+        }else{
+            close();
+        }
+    })
     </script>
   </body>
 </html>
